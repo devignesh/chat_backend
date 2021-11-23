@@ -11,6 +11,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//create a new message fucntion
 func CreateMessage(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var message schema.Messages
@@ -28,6 +29,7 @@ func CreateMessage(w http.ResponseWriter, r *http.Request) {
 
 }
 
+//get the list of all records from table
 func GetMessages(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var message []schema.Messages
@@ -41,6 +43,7 @@ func GetMessages(w http.ResponseWriter, r *http.Request) {
 
 }
 
+//get the sing record from the table based on the id
 func GetMessage(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -53,6 +56,7 @@ func GetMessage(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(&message)
 }
 
+//update the record based on the id
 func UpdateMessage(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -79,6 +83,7 @@ func UpdateMessage(w http.ResponseWriter, r *http.Request) {
 
 }
 
+//delete the record
 func DeleteMessage(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
