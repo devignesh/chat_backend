@@ -9,6 +9,7 @@ import (
 )
 
 func Routes() {
+	//new mux router
 	router := mux.NewRouter()
 
 	//users routes
