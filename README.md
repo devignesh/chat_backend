@@ -168,3 +168,7 @@ Once the server starts running, go to the postman, give the api endpoints in pos
                 }
             ]
         }
+
+# Todo
+
+    Add validation
