@@ -173,3 +173,4 @@ Once the server starts running, go to the postman, give the api endpoints in pos
 
     Add validation
     Add Dockerfile
+    NoSQL DB (Mongo)
